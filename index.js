@@ -21,19 +21,18 @@ class MerkleTree {
     }
 
     getProof(index) {
-        let leaves = this.leaves;
         let leavesLength;
+        let leaves = this.leaves;
         let proof = [];
-        console.log(`length: ${leaves.length}`)
 
         while (leaves.length !== 1) {
-            // Even index
+            // Even index --> Go right
             if (index % 2 === 0) {
-                proof.push({ data: leaves[index + 1], left: false });
+                if (leaves[index + 1]) proof.push({ data: leaves[index + 1], left: false });
             }
-            // Odd index
+            // Odd index --> Go left
             else {
-                proof.push({ data: leaves[index - 1], left: true });
+                if (leaves[index - 1]) proof.push({ data: leaves[index - 1], left: true });
             }
             index = Math.floor(index / 2);
 
@@ -47,7 +46,6 @@ class MerkleTree {
             }
         }
 
-        // console.log("proof: ", proof);
         return proof;
     }
 }
