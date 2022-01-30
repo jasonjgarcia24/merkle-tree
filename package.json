@@ -1,0 +1,25 @@
+{
+  "name": "merkle-tree",
+  "version": "1.0.0",
+  "description": "A simple implementation of a merkle tree and verification tests.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonjgarcia24/merkle-tree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonjgarcia24/merkle-tree/issues"
+  },
+  "homepage": "https://github.com/jasonjgarcia24/merkle-tree#readme",
+  "dependencies": {
+    "chai": "^4.3.4"
+  }
+}
